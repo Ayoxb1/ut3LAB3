@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/etiquetaNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre del guerrero:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/etGuerrero"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Ej. Mago"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/etiquetaNombre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <!-- Etiqueta para el segundo requisito de raza-->
+        <TextView
+            android:id="@+id/etiquetaRaza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Raza:"
+        />
+    <Spinner
+        android:id="@+id/Raza"
+        android:layout_height="match_parent"
+        android:maxHeight="" android:layout_width="wrap_content"
+        android:entries="@array/razas_tierra_media"
+
+        />
+
+
+    <!-- Etiqueta para la faccion -->
+
+    <TextView
+      android:id="@+id/tvLabelFaccion"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Facción:"
+
+      />
+
+    <RadioGroup
+      android:id="@+id/rgFaccion"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
+
+    <RadioButton
+      android:id="@+id/rbComunidad"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:checked="true"
+      android:text="Comunidad del Anillo"
+      />
+
+    <RadioButton
+      android:id="@+id/rbMordor"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Huestes de Mordor"
+
+      />
+
+    </RadioGroup>
+
+
+
+    <!-- Etiqueta para las Habilidades Especiales -->
+    <TextView
+        android:id="@+id/tvLabelHabilidades"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Habilidades Especiales:"
+     />
+
+    <!-- Casilla de verificacion de Sigilo -->
+    <CheckBox
+        android:id="@+id/casillavSigilo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sigilo"
+        />
+
+    <!-- Casilla de verificacion Combate con Espada -->
+    <CheckBox
+        android:id="@+id/casillavCombateEspada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Combate con Espada"
+        />
+
+    <!-- Boton de Registro -->
+    <ImageButton
+        android:id="@+id/btnRegistrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Registrar Personaje"
+        android:src="@android:drawable/escudo.jpg"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
